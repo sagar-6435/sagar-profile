@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #05070d;
+  --bg-elevated: #0a101c;
+  --navy: #07111f;
+  --line: rgba(173, 196, 255, 0.12);
+  --line-strong: rgba(173, 196, 255, 0.28);
+  --text: #f3f5fb;
+  --muted: #8b93a7;
+  --accent: #4d8dff;
+  --accent-soft: rgba(77, 141, 255, 0.16);
+  --violet: #7d78ff;
+  --glow: 0 0 40px rgba(77, 141, 255, 0.22);
+  --radius: 2px;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-violet: var(--violet);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-syne);
+  --font-mono: var(--font-ibm);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(77, 141, 255, 0.08), transparent 50%),
+    radial-gradient(900px 500px at -10% 20%, rgba(125, 120, 255, 0.06), transparent 45%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+body[data-cursor="on"] {
+  cursor: none;
+}
+
+body[data-cursor="on"] a,
+body[data-cursor="on"] button {
+  cursor: none;
+}
+
+::selection {
+  background: rgba(77, 141, 255, 0.35);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.section-shell {
+  position: relative;
+  width: min(1180px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.display {
+  font-family: var(--font-syne), var(--font-outfit), sans-serif;
+  letter-spacing: -0.04em;
+}
+
+.mono {
+  font-family: var(--font-ibm), ui-monospace, monospace;
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+}
+
+.glass {
+  background: rgba(8, 14, 26, 0.62);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(77, 141, 255, 0.55), transparent 40%, rgba(125, 120, 255, 0.35));
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.magnetic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 3.1rem;
+  padding: 0 1.35rem;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-ibm), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.magnetic-btn:hover {
+  background: rgba(77, 141, 255, 0.1);
+  border-color: rgba(77, 141, 255, 0.7);
+}
+
+.magnetic-btn.primary {
+  background: rgba(77, 141, 255, 0.12);
+  border-color: rgba(77, 141, 255, 0.55);
+  box-shadow: var(--glow);
+}
+
+.nav-link {
+  position: relative;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--font-ibm), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
+.nav-link:hover,
+.nav-link[data-active="true"] {
+  color: var(--text);
+}
+
+.nav-link[data-active="true"]::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .grain {
+    display: none;
+  }
+}
