@@ -1,4 +1,4 @@
-import { Outlet, Navigate, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const AdminLayout = () => {
   const token = localStorage.getItem('adminToken');
