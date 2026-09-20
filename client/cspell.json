@@ -1,0 +1,33 @@
+{
+	"words": [
+		"Avenir",
+		"BSCS",
+		"esbuild",
+		"Kanda",
+		"Msql",
+		"Sagar",
+		"Shadcnui",
+		"Sooperwizer",
+		"Supabase",
+		"vite",
+		"Wimetrix"
+	],
+	"ignorePaths": [
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"node_modules",
+		"vscode-extension",
+		".git/objects",
+		".vscode",
+		".vscode-insiders",
+		"coverage",
+		"build",
+		"dist",
+		"public",
+		"trace",
+		"**/*.mp4",
+		"**/*.svg",
+		"**/*.mp3",
+		"tsconfig.vitest-temp.json"
+	]
+}
