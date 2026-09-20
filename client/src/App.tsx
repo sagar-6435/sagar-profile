@@ -1,6 +1,7 @@
 import { HexBg } from './components/hex-bg';
 import { MouseTrail } from './components/mouse-trail';
 import { ScrollBar } from './components/scroll-bar';
+import { Navbar } from './components/navbar';
 import { AboutMe } from './sections/about-me.section';
 import { InfoSection } from './sections/info.section';
 import { TechStack } from './sections/tech-stack.section';
@@ -19,6 +20,7 @@ import './styles/projects.css';
 function App() {
 	return (
 		<>
+			<Navbar />
 			<HexBg />
 			<ScrollBar />
 			<MouseTrail />

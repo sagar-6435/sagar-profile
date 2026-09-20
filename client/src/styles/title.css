@@ -41,5 +41,14 @@
 	.title {
 		position: relative;
 		top: 0rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	
+	.title .secondary-text {
+		text-align: center;
+		margin-top: -2rem; /* Bring the hollow text up to overlap slightly */
 	}
 }

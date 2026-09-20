@@ -6,7 +6,7 @@ import {
 import { IoMailOutline, IoRocketSharp } from 'react-icons/io5';
 import { MdSecurity, MdImage, MdSms } from 'react-icons/md';
 import {
-	SiExpress, SiMysql, SiTailwindcss, SiFigma, SiFramer, SiJavascript, SiFlutter, SiNestjs, SiFastapi, SiPostgresql, SiFirebase, SiAuth0, SiJsonwebtokens, SiCloudinary, SiRazorpay, SiPaytm, SiGooglemaps, SiLeaflet, SiVercel, SiRender, SiRailway, SiRedis, SiPhonepe
+	SiExpress, SiMysql, SiTailwindcss, SiFigma, SiFramer, SiJavascript, SiFlutter, SiNestjs, SiFastapi, SiPostgresql, SiFirebase, SiAuth0, SiJsonwebtokens, SiCloudinary, SiRazorpay, SiPaytm, SiGooglemaps, SiLeaflet, SiVercel, SiRender, SiRailway, SiRedis, SiPhonepe, SiHostinger
 } from 'react-icons/si';
 import { TbBrandNextjs, TbBrandVscode } from 'react-icons/tb';
 
@@ -54,7 +54,7 @@ export const personal = {
 	fullName: 'Sagar Kanda',
 	title: 'Full Stack Developer',
 	greeting: 'Hi, I am',
-	repoUrl: 'https://github.com/sagar-6435/portfolio-1',
+	repoUrl: 'https://github.com/sagar-6435/sagar-profile',
 	repoStarLabel: '⭐ Star this repo',
 	showRepoStar: true,
 };
@@ -148,7 +148,7 @@ export type Project = {
 };
 
 export const projectsData = {
-	section: { title: 'My', subTitle: 'PROJECTS' },
+	section: { title: '', subTitle: 'PROJECTS ' },
 	projects: [
 		{
 			title: 'BayMax - Offline Emergency App',
@@ -161,7 +161,7 @@ export const projectsData = {
 			title: 'Portfolio Website',
 			description: 'A highly interactive and modern developer portfolio built with React and Vite. Features glassmorphism, dynamic glow effects, and a responsive grid system.',
 			techStack: ['React', 'Vite', 'CSS', 'TypeScript'],
-			githubUrl: 'https://github.com/sagar-6435/portfolio-latest',
+			githubUrl: 'https://github.com/sagar-6435/sagar-profile',
 			liveUrl: '#'
 		}
 	] satisfies Project[]
@@ -279,7 +279,7 @@ export const techStack = {
 			className: 'half-width',
 			items: [
 				{ label: 'Vercel', icon: SiVercel, iconColor: 'rgb(255, 255, 255)', glowColor: 'rgba(255, 255, 255, 0.4)' },
-				{ label: 'Hostinger', icon: FaServer, iconColor: 'rgb(103, 58, 183)', glowColor: 'rgba(103, 58, 183, 0.4)' },
+				{ label: 'Hostinger', icon: SiHostinger, iconColor: 'rgb(103, 58, 183)', glowColor: 'rgba(103, 58, 183, 0.4)' },
 				{ label: 'Render', icon: SiRender, iconColor: 'rgb(255, 255, 255)', glowColor: 'rgba(255, 255, 255, 0.9)' },
 				{ label: 'Railway', icon: SiRailway, iconColor: 'rgb(11, 13, 14)', glowColor: 'rgba(11, 13, 14, 0.4)' },
 			]
