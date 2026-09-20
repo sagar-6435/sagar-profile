@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons';
 import { DiMongodb } from 'react-icons/di';
 import {
-	FaBootstrap, FaGithub, FaLinkedinIn, FaNodeJs, FaReact, FaHtml5, FaCss3Alt, FaWhatsapp, FaServer, FaMousePointer
+	FaBootstrap, FaGithub, FaLinkedinIn, FaNodeJs, FaReact, FaHtml5, FaCss3Alt, FaWhatsapp, FaMousePointer
 } from 'react-icons/fa';
 import { IoMailOutline, IoRocketSharp } from 'react-icons/io5';
 import { MdSecurity, MdImage, MdSms } from 'react-icons/md';
